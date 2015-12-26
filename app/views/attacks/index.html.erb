@@ -1,6 +1,15 @@
+<style>
+  .uRl {
+    overflow: hidden;
+  }
+  .uRl:hover {
+    overflow: auto;
+  }
+</style>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Attacks</h1>
+<h1 align="center">Attacks Log</h1>
 
 <table class="table table-hover">
   <thead>
@@ -9,7 +18,7 @@
       <th>Case ID</th>
       <th>Client</th>
       <th>Attack type</th>
-      <th>Url</th>
+      <th align="center"><div align="center" style="width:100%; overflow:auto">Url</div></th>
       <th>Detection Time</th>
       <th>Detection Method</th>
       <th>Notes</th>
@@ -24,7 +33,7 @@
         <td><%= attack.case_id %></td>
         <td><%= attack.client %></td>
         <td><%= attack.attack_type %></td>
-        <td><%= attack.url %></td>
+        <td align="center"><div class="uRl" align="center" style="width:75%"><%= attack.url %></div></td>
         <td><%= attack.detection_time %></td>
         <td><%= attack.detection_method %></td>
         <td><%= attack.notes %></td>
